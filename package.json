@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@material/animation": "^0.34.0",
+    "@material/button": "^0.35.0"
+  }
+}
