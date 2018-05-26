@@ -1,0 +1,41 @@
+[debug] [2018-05-26T15:07:26.321Z] ----------------------------------------------------------------------
+[debug] [2018-05-26T15:07:26.341Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\crist\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-05-26T15:07:26.342Z] CLI Version:   3.18.5
+[debug] [2018-05-26T15:07:26.342Z] Platform:      win32
+[debug] [2018-05-26T15:07:26.342Z] Node Version:  v8.11.2
+[debug] [2018-05-26T15:07:26.361Z] Time:          Sat May 26 2018 09:07:26 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-26T15:07:26.361Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-26T15:07:26.440Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-26T15:07:26.441Z] > authorizing via signed-in user
+[debug] [2018-05-26T15:07:26.445Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gitblog-b01cb  
+  
+ Sat May 26 2018 09:07:26 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-26T15:07:27.399Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T15:07:27.400Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gitblog-b01cb/tokens  
+  
+ Sat May 26 2018 09:07:27 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-26T15:07:28.071Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T15:07:28.072Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gitblog-b01cb  
+  
+ Sat May 26 2018 09:07:28 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-26T15:07:28.515Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\crist\Documents\GitHub\GitBlog'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-26T15:07:40.549Z] Fetching environment
+[debug] [2018-05-26T15:07:40.554Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/445343083215:getServerAppConfig  
+  
+ Sat May 26 2018 09:07:40 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-26T15:07:40.555Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/445343083215/clients/_:getWebAppConfig  
+  
+ Sat May 26 2018 09:07:40 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-26T15:07:41.025Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T15:07:41.323Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-26T15:07:41.323Z] Starting @google-cloud/functions-emulator
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-26T15:07:49.654Z] Parsing function triggers
+[info] +  functions: addMessage: http://localhost:5001/gitblog-b01cb/us-central1/addMessage

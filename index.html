@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Examen de Experiencia de Usuario. -->
+<!-- GitBlog. -->
+
+<html lang="en">
+
+<head>
+    <!-- Generales. -->
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Diseño. -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <script src="back/main.js"></script>
+
+    <!-- CDN Bootstrap. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Firebase. -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyC4Bg1jWFQje5SmNVrkBfZXtDnt8UW6xts",
+            authDomain: "gitblog-b01cb.firebaseapp.com",
+            databaseURL: "https://gitblog-b01cb.firebaseio.com",
+            projectId: "gitblog-b01cb",
+            storageBucket: "gitblog-b01cb.appspot.com",
+            messagingSenderId: "445343083215"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Material.io -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<body>
+        <button class="foo-button mdc-button">Button</button>
+</body>
+
+</html>
