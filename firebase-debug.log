@@ -1,18 +1,227 @@
-[debug] [2018-05-27T14:58:34.461Z] ----------------------------------------------------------------------
-[debug] [2018-05-27T14:58:34.468Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\crist\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
-[debug] [2018-05-27T14:58:34.470Z] CLI Version:   3.18.5
-[debug] [2018-05-27T14:58:34.470Z] Platform:      win32
-[debug] [2018-05-27T14:58:34.470Z] Node Version:  v8.11.2
-[debug] [2018-05-27T14:58:34.471Z] Time:          Sun May 27 2018 08:58:34 GMT-0600 (Hora estándar, América Central)
-[debug] [2018-05-27T14:58:34.471Z] ----------------------------------------------------------------------
+[debug] [2018-05-27T15:10:34.964Z] ----------------------------------------------------------------------
+[debug] [2018-05-27T15:10:34.969Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\crist\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-27T15:10:34.969Z] CLI Version:   3.18.5
+[debug] [2018-05-27T15:10:34.969Z] Platform:      win32
+[debug] [2018-05-27T15:10:34.969Z] Node Version:  v8.11.2
+[debug] [2018-05-27T15:10:34.970Z] Time:          Sun May 27 2018 09:10:34 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:34.970Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-05-27T14:58:34.505Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-05-27T14:58:34.507Z] > authorizing via signed-in user
-[debug] [2018-05-27T14:58:34.512Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gitblog-b01cb  
+[debug] [2018-05-27T15:10:34.992Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-27T15:10:34.994Z] > authorizing via signed-in user
+[debug] [2018-05-27T15:10:34.998Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gitblog-b01cb  
   
- Sun May 27 2018 08:58:34 GMT-0600 (Hora estándar, América Central)
-[debug] [2018-05-27T14:58:35.141Z] <<< HTTP RESPONSE 200
-[debug] [2018-05-27T14:58:35.142Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gitblog-b01cb/tokens  
+ Sun May 27 2018 09:10:34 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:35.748Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:10:35.750Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gitblog-b01cb/tokens  
   
- Sun May 27 2018 08:58:35 GMT-0600 (Hora estándar, América Central)
-[debug] [2018-05-27T14:58:35.680Z] <<< HTTP RESPONSE 200
+ Sun May 27 2018 09:10:35 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:36.322Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'gitblog-b01cb'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-05-27T15:10:47.437Z] >>> HTTP REQUEST PUT https://gitblog-b01cb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun May 27 2018 09:10:47 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:48.099Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database gitblog-b01cb is valid
+[debug] [2018-05-27T15:10:48.102Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/gitblog-b01cb  
+  
+ Sun May 27 2018 09:10:48 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:48.703Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-05-27T15:10:48.706Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb:test  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:10:48 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:48.999Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-05-27T15:10:49.006Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb:test  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:10:49 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:49.211Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-05-27T15:10:49.215Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.12.1",
+    "firebase-functions": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-05-27T15:10:49.216Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/gitblog-b01cb?view=CONSUMER_VIEW  
+  
+ Sun May 27 2018 09:10:49 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:49.217Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/gitblog-b01cb?view=CONSUMER_VIEW  
+  
+ Sun May 27 2018 09:10:49 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:50.006Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:10:50.081Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2018-05-27T15:10:50.083Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gitblog-b01cb  
+  
+ Sun May 27 2018 09:10:50 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:50.486Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:10:50.487Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/445343083215:getServerAppConfig  
+  
+ Sun May 27 2018 09:10:50 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:51.019Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-05-27T15:10:51.024Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:10:51 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:51.414Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:10:51.415Z] [rules] created ruleset projects/gitblog-b01cb/rulesets/99294e41-19c0-42e4-ae29-c2ee7eb7bd8a
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-05-27T15:10:51.417Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:10:51 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:51.418Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/gitblog-b01cb/databases/(default)/indexes  
+  
+ Sun May 27 2018 09:10:51 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:51.768Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:10:51.768Z] [rules] created ruleset projects/gitblog-b01cb/rulesets/8331b4a0-3b98-4672-b84a-b2c83d8b5d16
+[debug] [2018-05-27T15:10:53.172Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-05-27T15:10:53.174Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/gitblog-b01cb/configs  
+  
+ Sun May 27 2018 09:10:53 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:10:53.698Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing  directory for upload...
+[debug] [2018-05-27T15:10:58.116Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/gitblog-b01cb/uploads/-LDX8jEbTeMj5mtP0CKU?fileCount=1591&message=  
+  
+ Sun May 27 2018 09:10:58 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:11:54.174Z] ----------------------------------------------------------------------
+[debug] [2018-05-27T15:11:54.181Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\crist\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-27T15:11:54.182Z] CLI Version:   3.18.5
+[debug] [2018-05-27T15:11:54.182Z] Platform:      win32
+[debug] [2018-05-27T15:11:54.182Z] Node Version:  v8.11.2
+[debug] [2018-05-27T15:11:54.183Z] Time:          Sun May 27 2018 09:11:54 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:11:54.183Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-27T15:11:54.204Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-27T15:11:54.205Z] > authorizing via signed-in user
+[debug] [2018-05-27T15:11:54.210Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gitblog-b01cb  
+  
+ Sun May 27 2018 09:11:54 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:11:55.002Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:11:55.007Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gitblog-b01cb/tokens  
+  
+ Sun May 27 2018 09:11:55 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:11:55.552Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'gitblog-b01cb'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2018-05-27T15:12:06.710Z] >>> HTTP REQUEST PUT https://gitblog-b01cb.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+} 
+ Sun May 27 2018 09:12:06 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:07.218Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database gitblog-b01cb is valid
+[debug] [2018-05-27T15:12:07.222Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/gitblog-b01cb  
+  
+ Sun May 27 2018 09:12:07 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:07.804Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-05-27T15:12:07.807Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb:test  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:12:07 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:08.099Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-05-27T15:12:08.104Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb:test  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:12:08 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:08.306Z] <<< HTTP RESPONSE 200
+[info] +  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-05-27T15:12:08.310Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.12.1",
+    "firebase-functions": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-05-27T15:12:08.312Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/gitblog-b01cb?view=CONSUMER_VIEW  
+  
+ Sun May 27 2018 09:12:08 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:08.312Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/gitblog-b01cb?view=CONSUMER_VIEW  
+  
+ Sun May 27 2018 09:12:08 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:09.084Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:12:09.140Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2018-05-27T15:12:09.142Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/gitblog-b01cb  
+  
+ Sun May 27 2018 09:12:09 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:09.537Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:12:09.538Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/445343083215:getServerAppConfig  
+  
+ Sun May 27 2018 09:12:09 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:09.965Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-05-27T15:12:09.970Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:12:09 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:10.338Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:12:10.339Z] [rules] created ruleset projects/gitblog-b01cb/rulesets/c17e8cdc-a8c6-40dc-8ccd-d64716931fdf
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-05-27T15:12:10.342Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/gitblog-b01cb/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Sun May 27 2018 09:12:10 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:10.343Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/gitblog-b01cb/databases/(default)/indexes  
+  
+ Sun May 27 2018 09:12:10 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:10.710Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T15:12:10.710Z] [rules] created ruleset projects/gitblog-b01cb/rulesets/62268e39-8313-44d5-aedf-527b6789ceb5
+[debug] [2018-05-27T15:12:12.126Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-05-27T15:12:12.130Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/gitblog-b01cb/configs  
+  
+ Sun May 27 2018 09:12:12 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T15:12:12.404Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing / directory for upload...
