@@ -7,7 +7,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
-/** >>>>>>>>>>>>>>>>>>>>>>>>> AGREGA LA FUNCIÓN addMessage(). */
+/** >>>>>>>>>>>>>>>>>>>>>>>>> AGREGA LA FUNCIÓN addMessage(). 
 
 // Take the text parameter passed to this HTTP endpoint and insert it into the
 // Realtime Database under the path /messages/:pushId/original

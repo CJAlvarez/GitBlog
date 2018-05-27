@@ -32,43 +32,189 @@
     <meta charset="utf-8" />
     <title>GitBlog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/Github-Free-PNG-Image.png" />
 
     <!-- Diseño. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <style>
+        body {
+            background: rgb(36, 34, 34);
+
+            background-image: url("images/Github-Free-PNG-Image.png");
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .frame {
+            background-image: url("images/Github-Free-PNG-Image.png");
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        h1 {
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            color: white;
+            position: relative;
+            size: 100px;
+        }
+
+        h1:hover {
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 35px;
+            opacity: 0.6;
+        }
+
+        #com {
+            color: maroon;
+        }
+
+        #openNav {
+            background-color: maroon;
+            color: white;
+        }
+
+        .GB-background-maroon {
+            background-color: maroon;
+        }
+
+        .GB-background-grey {
+            background-color: rgb(36, 34, 34);
+        }
+
+        .GB-color-maroon {
+            color: maroon;
+        }
+
+        .GB-color-white {
+            color: white;
+        }
+
+        .GB-color-grey {
+            color: rgb(36, 34, 34);
+        }
+
+        .GB-color-grey:hover {
+            color: maroon;
+        }
+
+        .GB-al-rigth {
+            grid-row-end: initial;
+        }
+    </style>
+
+    <script> function w3_open() {
+            document.getElementById("main").style.marginLeft = "60px";
+            document.getElementById("mySidebar").style.width = "60px";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+    </script>
+
+    <script> function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
+    <!-- Autenticacion. -->
+    <script> function login() {
+            document.getElementById("login_button").style.display = 'none';
+            document.getElementById("logout_button").style.display = "block";
+        }
+    </script>
+    <script> function logout() {
+            document.getElementById("logout_button").style.display = 'none';
+            document.getElementById("login_button").style.display = "block";
+        }
+    </script>
+
+    </script>
 </head>
 
 <body>
     <!-- Sidebar. -->
     <div class="w3-sidebar w3-bar-block w3-card w3-center w3-animate-left" style="display:none" id="mySidebar" onclick="w3_close()">
 
-        <a href="#" class="w3-bar-item w3-button">
-            <i class="fa fa-home" style="font-size:30px;"></i>
+        <a href="#" class="w3-bar-item w3-button"style="display:block" id="login_button" onclick="login()">
+            <i class="fa fa-user GB-color-grey" style="font-size:30px;"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button ">
+            <i class="fa fa-home GB-color-grey" style="font-size:30px;"></i>
         </a>
         <a href="#" class="w3-bar-item w3-button">
-            <i class="fa fa-search" style="font-size:30px;"></i>
+            <i class="fa fa-bell GB-color-grey" style="font-size:30px;"></i>
         </a>
-        <a href="#" class="w3-bar-item w3-button">
-            <i class="fa fa-envelope" style="font-size:30px;"></i>
-        </a>
-        <a href="#" class="w3-bar-item w3-button">
-            <i class="fa fa-globe" style="font-size:30px;"></i>
+        <a href="#" class="w3-bar-item w3-button" style="display:none" id="logout_button" onclick="logout()">
+            <i class="fa fa-close GB-color-grey" style="font-size:30px;"></i>
         </a>
     </div>
 
-    <!-- BigTitle, Sidebar-openButton. -->
+    <!-- Main. -->
     <div class="w3-row" id="main">
-        <button id="openNav" class="w3-col w3-button w3-large" style="width:55px" onclick="w3_open()">&#9776;</button>
-        <div class="w3-rest" onclick="w3_close()">
-            <h1>GitBlog<small id="com">.com</small>
-            </h1>
-        </div>
-    </div>
 
-    <!-- Content. -->
-    <div class="frame w3-row" onclick="w3_close()">
-        
+        <!-- BigTitle, Sidebar-openButton. -->
+        <div class="w3-row" id="main">
+
+            <!-- OpenButton. -->
+            <button id="openNav" class="w3-col w3-button w3-large" style="width:55px" onclick="w3_open()">&#9776;</button>
+
+            <!-- BigTitle-->
+            <div class="w3-rest" onclick="w3_close()">
+                <h1>GitBlog
+                    <small id="com">.com</small>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Content (The Grid). -->
+        <div class="frame w3-row-padding" onclick="w3_close()">
+
+
+            <!-- Right Column -->
+            <div class="w3-twothird">
+
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <div class="w3-container w3-padding">
+                        <h6 class="w3-opacity">¿Qué hay de nuevo?</h6>
+                        <p contenteditable="true" class="w3-border w3-padding">Actualización...</p>
+                        <button type="button" class="w3-button GB-background-maroon GB-color-white">
+                            <i class="fa fa-pencil"></i>  Hecho</button>
+                        <button type="button" class="w3-button GB-al-rigth GB-background-grey GB-color-white">
+                            <i class="fa fa-key"></i>  Visibilidad</button>
+                    </div>
+                </div>
+
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16">
+                        <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge GB-color-maroon"></i>Historia</h2>
+                    <div class="w3-container">
+                    </div>
+                </div>
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- Left Column -->
+            <div class="w3-third">
+                <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-container w3-card w3-white w3-margin-bottom">
+                        <h2 class="w3-text-grey w3-padding-16">
+                            <i class="fa fa-user fa-fw w3-margin-right w3-xxlarge GB-color-maroon"></i>Personas...</h2>
+                        <div class="w3-container">
+                            <h5 class="w3-opacity">
+                                <b>"Listado de personas"</b>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Left Column -->
+            </div>
+            <!-- End Grid -->
+        </div>
+        <!-- End Main. -->
     </div>
 
 </body>

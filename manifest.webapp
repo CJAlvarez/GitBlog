@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "GitBlog-b01cb",
+  "launch_path": "public/index.html",
+  "description": "Examen de UX",
+  "developer": {
+    "name": "Google inc.",
+    "url": "https://firebase.google.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "GitBlog-b01cb",
+      "description": "Examen de UX"
+    }
+  }
+}
