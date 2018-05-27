@@ -1,0 +1,18 @@
+[debug] [2018-05-27T14:58:34.461Z] ----------------------------------------------------------------------
+[debug] [2018-05-27T14:58:34.468Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\crist\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-05-27T14:58:34.470Z] CLI Version:   3.18.5
+[debug] [2018-05-27T14:58:34.470Z] Platform:      win32
+[debug] [2018-05-27T14:58:34.470Z] Node Version:  v8.11.2
+[debug] [2018-05-27T14:58:34.471Z] Time:          Sun May 27 2018 08:58:34 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T14:58:34.471Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-27T14:58:34.505Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-27T14:58:34.507Z] > authorizing via signed-in user
+[debug] [2018-05-27T14:58:34.512Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/gitblog-b01cb  
+  
+ Sun May 27 2018 08:58:34 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T14:58:35.141Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-27T14:58:35.142Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/gitblog-b01cb/tokens  
+  
+ Sun May 27 2018 08:58:35 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-05-27T14:58:35.680Z] <<< HTTP RESPONSE 200
