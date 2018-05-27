@@ -5,20 +5,6 @@
 <html lang="en">
 
 <head>
-    <!-- Generales. -->
-    <meta charset="utf-8" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Diseño. -->
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-
-    <!-- CDN Bootstrap. -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <!-- Firebase. -->
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
@@ -33,11 +19,58 @@
         firebase.initializeApp(config);
     </script>
 
+    <!-- CDN Bootstrap. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Generales. -->
+    <meta charset="utf-8" />
+    <title>GitBlog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Diseño. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 </head>
 
 <body>
+    <!-- Sidebar. -->
+    <div class="w3-sidebar w3-bar-block w3-card w3-center w3-animate-left" style="display:none" id="mySidebar" onclick="w3_close()">
 
-    <h1>HEY THERE!</h1>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-home" style="font-size:30px;"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-search" style="font-size:30px;"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-envelope" style="font-size:30px;"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-globe" style="font-size:30px;"></i>
+        </a>
+    </div>
+
+    <!-- BigTitle, Sidebar-openButton. -->
+    <div class="w3-row" id="main">
+        <button id="openNav" class="w3-col w3-button w3-large" style="width:55px" onclick="w3_open()">&#9776;</button>
+        <div class="w3-rest" onclick="w3_close()">
+            <h1>GitBlog<small id="com">.com</small>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Content. -->
+    <div class="frame w3-row" onclick="w3_close()">
+        
+    </div>
+
 </body>
 
 </html>
